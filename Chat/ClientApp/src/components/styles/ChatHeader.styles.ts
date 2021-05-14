@@ -28,7 +28,7 @@ const topicNameLabelStyle = mergeStyles({
   fontSize: '1rem', // 16px
   fontWeight: 600,
   marginRight: '0.125rem',
-  width: '31.25rem',
+  minWidth: '15.25rem', // 244px
   wordBreak: 'break-all',
   overflowY: 'hidden'
 });

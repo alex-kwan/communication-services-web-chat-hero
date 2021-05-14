@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ConfigurationScreen from '../components/ConfigurationScreen';
+import { ConfigurationScreen } from '../components/ConfigurationScreen';
 import { addUserToThread, isValidThread } from '../core/sideEffects';
 import { State } from '../core/reducers/index';
 import { setAddThreadMemberError } from '../core/actions/ThreadMembersAction';

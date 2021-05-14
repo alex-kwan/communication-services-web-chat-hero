@@ -59,7 +59,7 @@ let chatThreadRef: any = createRef();
 //  A Chatthread will be fed many messages so it will try to map out the messages out of the props and feed them into a
 //  Chat item
 //  We need to be smarter and figure out for the last N messages are they all of the same person or not?
-export default (props: ChatThreadProps): JSX.Element => {
+export const ChatThread = (props: ChatThreadProps): JSX.Element => {
   const [messagesWithAttached, setMessagesWithAttached] = useState<any[]>([]);
   const [indexOfTheFirstMessage, setIndexOfTheFirstMessage] = useState(
     props.messages.length

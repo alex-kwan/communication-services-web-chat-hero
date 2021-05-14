@@ -19,16 +19,20 @@ interface ChatScreenProps {
   getMessages(): void;
 }
 
-export default (props: ChatScreenProps): JSX.Element => {
+export const ChatScreen = (props: ChatScreenProps): JSX.Element => {
   // People pane will be visible when a chat is joined if the window width is greater than 600
-  const [selectedPane, setSelectedPane] = useState(
-    window.innerWidth > 600 ? SidePanelTypes.People : SidePanelTypes.None
-  );
+  const [selectedPane, setSelectedPane] = useState(SidePanelTypes.None);
 
   const { errorHandler, threadMembersError, getThread } = props;
 
   useEffect(() => {
-    props.getMessages();
+    // swing out the side pane if the screen is wide enough
+    if (window.innerWidth > 600) {
+      setSelectedPane(SidePanelTypes.People)
+    }
+
+    // set default focus on the sendbox
+    document.getElementById('sendbox')?.focus();
   }, []);
 
   useEffect(() => {

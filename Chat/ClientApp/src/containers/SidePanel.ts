@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { GUID_FOR_INITIAL_TOPIC_NAME } from '../../src/constants';
 import { setContosoUsers } from '../core/actions/ContosoClientAction';
 import { setThreadMembers, setRemoveThreadMemberError } from '../core/actions/ThreadMembersAction';
-import SidePanel from '../components/SidePanel';
+import { SidePanel } from '../components/SidePanel';
 import { State } from '../core/reducers/index';
 import React from 'react';
 import { updateThreadTopicName, removeThreadMemberByUserId } from '../core/sideEffects';

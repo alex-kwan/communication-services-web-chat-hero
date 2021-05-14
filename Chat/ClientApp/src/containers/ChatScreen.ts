@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ChatScreen from '../components/ChatScreen';
+import { ChatScreen } from '../components/ChatScreen';
 import { getThread, getThreadMembers, getMessages } from '../core/sideEffects';
 import { State } from '../core/reducers';
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { State } from '../core/reducers/index';
-import ChatSystemMessage from '../components/ChatSystemMessage';
+import { ChatSystemMessage } from '../components/ChatSystemMessage';
 import { COOL_PERIOD_THRESHOLD } from '../constants';
 
 const mapStateToProps = (state: State) => ({

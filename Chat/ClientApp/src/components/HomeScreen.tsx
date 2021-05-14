@@ -37,7 +37,7 @@ const imageStyleProps: IImageStyles = {
   root: {},
 };
 
-export default (props: HomeScreenProps): JSX.Element => {
+export const HomeScreen = (props: HomeScreenProps): JSX.Element => {
   const spinnerLabel = 'Creating a new chat thread...';
   const iconName = 'SkypeCircleCheck';
   const imageProps = { src: heroSVG.toString() };

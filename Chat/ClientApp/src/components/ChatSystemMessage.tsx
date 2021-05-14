@@ -5,12 +5,12 @@ import {
   ChatSystemMessageTextStyle,
 } from './styles/ChatSystemMessage.styles';
 
-interface ChatSystemMessage {
+interface ChatSystemMessageProps {
   generateCoolPeriod(): string;
   textValueOverflow: boolean;
 }
 
-export default (props: ChatSystemMessage): JSX.Element => {
+export const ChatSystemMessage = (props: ChatSystemMessageProps): JSX.Element => {
   let coolPeriodMessage = props.generateCoolPeriod();
 
   if (coolPeriodMessage === '' && !props.textValueOverflow) {

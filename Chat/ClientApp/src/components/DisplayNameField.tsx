@@ -20,7 +20,7 @@ interface DisplayNameFieldProps {
   isNameLengthExceedLimit: boolean;
 }
 
-export default (props: DisplayNameFieldProps): JSX.Element => {
+export const DisplayNameField = (props: DisplayNameFieldProps): JSX.Element => {
   const onNameTextChange = (event: any) => {
     props.setName(event.target.value);
     if (!event.target.value) {

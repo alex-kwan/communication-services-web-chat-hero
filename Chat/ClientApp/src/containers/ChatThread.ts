@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ChatThread from '../components/ChatThread';
+import { ChatThread } from '../components/ChatThread';
 import { State } from '../core/reducers/index';
 import { sendReadReceipt } from '../core/sideEffects';
 import { PARTICIPANTS_THRESHOLD } from '../constants';

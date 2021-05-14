@@ -11,7 +11,7 @@ interface TypingIndicatorProps {
   generateTypingIndicatorVerb(): string;
 }
 
-export default (props: TypingIndicatorProps): JSX.Element => {
+export const TypingIndicator = (props: TypingIndicatorProps): JSX.Element => {
   return (
     <div className={TypingIndicatorContainerStyle}>
       <span className={TypingIndicatorListStyle}>

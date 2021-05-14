@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { ChatThreadMember } from '@azure/communication-chat';
 
 import { GUID_FOR_INITIAL_TOPIC_NAME } from '../../src/constants';
-import ChatHeader from '../components/ChatHeader';
+import { ChatHeader } from '../components/ChatHeader';
 import { State } from '../core/reducers/index';
 import { removeThreadMemberByUserId } from '../core/sideEffects';
 

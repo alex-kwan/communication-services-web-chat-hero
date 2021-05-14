@@ -5,7 +5,7 @@ import * as siteVariables from '@fluentui/react-northstar/dist/es/themes/teams/s
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import { App } from './App';
 import './index.css';
 
 const iconTheme = {

@@ -26,7 +26,7 @@ interface SendboxProps {
   user: User;
 }
 
-export default (props: SendboxProps): JSX.Element => {
+export const SendBox = (props: SendboxProps): JSX.Element => {
   const [textValue, setTextValue] = useState('');
   const [textValueOverflow, setTextValueOverflow] = useState(false);
   const [

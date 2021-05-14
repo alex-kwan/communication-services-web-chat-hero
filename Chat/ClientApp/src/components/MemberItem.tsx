@@ -17,7 +17,7 @@ interface MemberItemProps {
   removeThreadMemberByUserId(userId: string): void;
 }
 
-export default (props: MemberItemProps): JSX.Element => {
+export const MemberItem = (props: MemberItemProps): JSX.Element => {
   return (
     <div className={memberItemContainerStyle}>
       <div className={messageAvatarContainerStyle(props.avatar)}>

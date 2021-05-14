@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import EndScreen from '../components/EndScreen';
+import { EndScreen } from '../components/EndScreen';
 import { addThreadMember } from '../core/sideEffects';
 
 const mapDispatchToProps = (dispatch: any) => ({

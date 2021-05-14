@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import TypingIndicator from '../components/TypingIndicator';
+import { TypingIndicator } from '../components/TypingIndicator';
 import { State } from '../core/reducers/index';
 import { PARTICIPANTS_THRESHOLD, MAXIMUM_LENGTH_OF_TYPING_USERS } from '../constants';
 

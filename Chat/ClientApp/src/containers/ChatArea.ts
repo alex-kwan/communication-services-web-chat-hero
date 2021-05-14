@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ChatArea from '../components/ChatArea';
+import { ChatArea } from '../components/ChatArea';
 import { State } from '../core/reducers/index';
 import { updateTypingUsers } from '../core/sideEffects';
 

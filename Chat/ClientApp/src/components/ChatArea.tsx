@@ -12,7 +12,7 @@ interface ChatAreaProps {
   typingNotifications: any;
 }
 
-export default (props: ChatAreaProps): JSX.Element => {
+export const ChatArea = (props: ChatAreaProps): JSX.Element => {
   const { onUpdateTypingUsers } = props;
 
   useEffect(() => {

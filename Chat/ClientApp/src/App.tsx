@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import ChatScreen from './containers/ChatScreen';
 import ConfigurationScreen from './containers/ConfigurationScreen';
 import EndScreen from './containers/EndScreen';
-import ErrorScreen from './components/ErrorScreen';
+import { ErrorScreen } from './components/ErrorScreen';
 import HomeScreen from './containers/HomeScreen';
 import { reducer } from './core/reducers/index';
 import { getBuildTime, getChatSDKVersion, getThreadId } from './utils/utils';
@@ -22,7 +22,7 @@ initializeIcons();
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
-export default (): JSX.Element => {
+export const App = (): JSX.Element => {
   const [page, setPage] = useState('home');
 
   const getComponent = () => {

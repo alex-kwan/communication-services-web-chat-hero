@@ -32,7 +32,7 @@ import {
   FOX,
   getThreadId,
 } from '../utils/utils';
-import DisplayNameField from './DisplayNameField';
+import { DisplayNameField } from './DisplayNameField';
 import { MAXIMUM_LENGTH_OF_NAME } from '../constants';
 
 export interface ConfigurationScreenProps {
@@ -43,7 +43,7 @@ export interface ConfigurationScreenProps {
   setAddThreadMemberError(addThreadMemberError: boolean | undefined): void;
 }
 
-export default (props: ConfigurationScreenProps): JSX.Element => {
+export const ConfigurationScreen = (props: ConfigurationScreenProps): JSX.Element => {
   const spinnerLabel = 'Initializing chat client...';
 
   const avatarsList = [CAT, MOUSE, KOALA, OCTOPUS, MONKEY, FOX];
@@ -61,7 +61,7 @@ export default (props: ConfigurationScreenProps): JSX.Element => {
     undefined
   );
 
-  const { addThreadMemberError } = props;
+  const { addThreadMemberError, setAddThreadMemberError, joinChatHandler } = props;
 
   const onAvatarChange = (newAvatar: string) => {
     setSelectedAvatar(newAvatar);
@@ -91,12 +91,12 @@ export default (props: ConfigurationScreenProps): JSX.Element => {
       alert(
         "You can't be added at this moment. Please wait at least 60 seconds to try again."
       );
-      props.setAddThreadMemberError(undefined);
+      setAddThreadMemberError(undefined);
       setIsJoining(false);
     } else if (addThreadMemberError === false) {
-      props.joinChatHandler();
+      joinChatHandler();
     }
-  }, [addThreadMemberError]);
+  }, [addThreadMemberError, setAddThreadMemberError, joinChatHandler]);
 
   useEffect(() => {
     const isValidThread = async () => {

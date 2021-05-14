@@ -15,8 +15,8 @@ import { ChatThread, ChatThreadMember } from '@azure/communication-chat';
 
 import { ENTER_KEY, MAXIMUM_LENGTH_OF_TOPIC } from '../../src/constants';
 import { getEmoji } from '../core/sideEffects';
-import InviteFooter from './InviteFooter';
-import MemberItem from './MemberItem';
+import { InviteFooter } from './InviteFooter';
+import { MemberItem } from './MemberItem';
 import { inputBoxTextStyle } from './styles/ConfigurationScreen.styles';
 import {
   memberListStyle,
@@ -51,7 +51,7 @@ export enum SidePanelTypes {
   Settings = 'Settings',
 }
 
-export default (props: SidePanelProps): JSX.Element => {
+export const SidePanel = (props: SidePanelProps): JSX.Element => {
   const {
     users,
     threadMembers,

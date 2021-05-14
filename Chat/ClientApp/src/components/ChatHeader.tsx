@@ -36,7 +36,7 @@ interface ChatHeaderProps {
   removeThreadMemberByUserId(userId: string): void;
 }
 
-export default (props: ChatHeaderProps): JSX.Element => {
+export const ChatHeader = (props: ChatHeaderProps): JSX.Element => {
   const togglePivotItem = (item: PivotItem | undefined) => {
     if (!item) return;
     if (item.props.itemKey === SidePanelTypes.Settings)
